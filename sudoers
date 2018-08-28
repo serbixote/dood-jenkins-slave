@@ -1,0 +1,17 @@
+root ALL=(ALL) ALL
+
+Cmnd_Alias DOCKER = !/bin/docker_bin, \
+                    /bin/docker_bin version, \
+                    /bin/docker_bin images*, \
+                    /bin/docker_bin pull*, \
+                    /bin/docker_bin build*, \
+                    /bin/docker_bin push*, \
+                    /bin/docker_bin login*, \
+                    /bin/docker_bin logout*, \
+                    /bin/docker_bin create*, \
+                    /bin/docker_bin cp*, \
+                    /bin/docker_bin tag*, \
+                    /bin/docker_bin container prune, \
+                    /bin/docker_bin image prune
+
+jenkins ALL=(ALL) NOPASSWD: DOCKER
