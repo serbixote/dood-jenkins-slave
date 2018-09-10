@@ -24,7 +24,7 @@ services:
       - slave.env
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - jenkins-slave-data:/home/jenkins/agent
+      - slave-data:/home/jenkins/agent
 volumes:
   slave-data:
 ```
