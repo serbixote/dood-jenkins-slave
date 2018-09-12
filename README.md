@@ -2,11 +2,12 @@
 
 This repository is aimed to provide an example of a Docker Jenkins slave, using the Docker out of Docker concept (or "sibling" as explained at [Using Docker-in-Docker for your CI or testing environment? Think twice]( https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci)) without giving users root access to the host.
 
+The images of this repository are based on the [jenkins/ssh-slave](https://hub.docker.com/r/jenkins/ssh-slave/), [jenkins/jnlp-slave](https://hub.docker.com/r/jenkins/jnlp-slave/) official images from the [Jenkins's Docker Hub account](https://hub.docker.com/u/jenkins/).
+
 ### Quick start:
 
 ```
-docker run --rm --env-file slave.env \
-    -v /var/run/docker.sock:/var/run/docker.sock \
+docker run --rm --env-file slave.env -v /var/run/docker.sock:/var/run/docker.sock \
     quay.io/marco2704/dood-jenkins-slave:1.8.23
 ```
 
