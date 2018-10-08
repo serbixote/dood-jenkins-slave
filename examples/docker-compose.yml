@@ -1,0 +1,12 @@
+version: '3.4'
+services:
+  slave:
+    image: quay.io/marco2704/dood-jenkins-slave:1.8.23 
+    container_name: jenkins_slave
+    env_file:
+      - slave.env
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - slave-data:/home/jenkins/agent
+volumes:
+  slave-data:
