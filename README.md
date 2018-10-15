@@ -32,3 +32,10 @@ services:
 volumes:
   slave-data:
 ```
+
+### Using with the Kubernetes Plugin
+
+[](https://github.com/marco2704/dood-jenkins-slave/blob/master/examples/images/k8-plugin-1.png)
+
+[](https://github.com/marco2704/dood-jenkins-slave/blob/master/examples/images/k8-plugin-2.png)
+
