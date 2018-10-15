@@ -40,5 +40,6 @@ Configure the image being is also the jnlp agent:
 ![](https://github.com/marco2704/dood-jenkins-slave/blob/master/examples/images/k8-plugin-2.png)
 
 Mount the node Docker socket into the container:
+
 ![](https://github.com/marco2704/dood-jenkins-slave/blob/master/examples/images/k8-plugin-1.png)
 
