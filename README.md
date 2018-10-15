@@ -11,19 +11,19 @@ The images of this repository are based on the [jenkins/jnlp-slave](https://hub.
 
 ```
 docker run --rm --env-file slave.env -v /var/run/docker.sock:/var/run/docker.sock \
-    quay.io/marco2704/dood-jenkins-slave:1.8.23
+    quay.io/marco2704/dood-jenkins-slave:18.06.1-3.26-1-alpine
 ```
 
 ### Using Compose:
 
-Before running `docker-compose up` command make sure the value variables of `slave.env` are properly set. Also have in mind that the following `docker-compose.yml` file is just an example:
+Before running `docker-compose up` command make sure variables of `slave.env` are properly set.
 
 ```
-version: '3.4'
+version: '3'
 services:
   slave:
-    image: quay.io/marco2704/dood-jenkins-slave:1.8.23 
-    container_name: jenkins_slave
+    image: quay.io/marco2704/dood-jenkins-slave:18.06.1-3.26-1-alpine
+    container_name: dood_jenkins_slave
     env_file:
       - slave.env
     volumes:
