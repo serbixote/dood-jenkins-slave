@@ -8,14 +8,13 @@ The images of this repository are based on the [jenkins/jnlp-slave](https://hub.
 
 ### Quick Example:
 
-```
-docker build -t dood-jenkins-slave:$DOCKER_VERSION-$SLAVE_VERSION \
+```sh
+$ docker build -t dood-jenkins-slave:$DOCKER_VERSION-$SLAVE_VERSION \
                        --build-arg DOCKER_VERSION=$DOCKER_VERSION \
                        --build-arg SLAVE_VERSION=$SLAVE_VERSION .
 
-docker run --rm --env-file slave.env 
-          -v /var/run/docker.sock:/var/run/docker.sock 
-          dood-jenkins-slave:$DOCKER_VERSION-$SLAVE_VERSION
+$ docker run --rm --env-file slave.env -v /var/run/docker.sock:/var/run/docker.sock \
+                                  dood-jenkins-slave:$DOCKER_VERSION-$SLAVE_VERSION
 ```
 
 `slave.env` must contain the environment variables required: `JENKINS_URL`, `JENKINS_AGENT_NAME`, `JENKINS_SECRET`, `JENKINS_AGENT_WORKDIR`, `JENKINS_TUNNEL`.
