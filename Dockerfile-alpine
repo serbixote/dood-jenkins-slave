@@ -16,5 +16,5 @@ RUN apk add --no-cache sudo
 USER jenkins
 
 COPY --from=downloader /docker/docker /bin/docker_bin
-COPY docker /bin/docker
+COPY docker_wrapper /bin/docker
 COPY sudoers /etc/sudoers

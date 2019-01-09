@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends sudo \
     && rm -rf /var/lib/apt/lists/*
 
 USER jenkins
- 
+
 COPY --from=downloader /docker/docker /bin/docker_bin
-COPY docker /bin/docker
+COPY docker_wrapper /bin/docker
 COPY sudoers /etc/sudoers
